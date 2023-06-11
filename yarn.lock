@@ -3512,10 +3512,10 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nestjs-bull-board@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/nestjs-bull-board/-/nestjs-bull-board-1.1.0.tgz#d37f369f2e2a2358cdba6777a740ff33919bda58"
-  integrity sha512-NAyNcjqPuG59zlPid69K5m0IqgvWxeqRKIOGjaIJiG1dxVxRkmkYgfGopOfrt9qRbP6ZFec5BFNi6rMnxwd24g==
+nestjs-bull-board@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nestjs-bull-board/-/nestjs-bull-board-1.2.0.tgz#680640fe4a6338911fe2300dcf81092788efd73f"
+  integrity sha512-/L7qGHIcc/0yAd9e17BN/xKlPnWHupyhP4dJDVpDS1mFGePDmy8OAkOhNpx5X6TAGmwF58MQHnAo8GJpBp+Lkw==
   dependencies:
     "@nestjs/bull-shared" "^0.1.3"
 
