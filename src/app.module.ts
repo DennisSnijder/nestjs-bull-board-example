@@ -1,8 +1,10 @@
-import { Module } from "@nestjs/common";
+import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { BullModule } from "@nestjs/bullmq";
-import { BullBoardModule } from "nestjs-bull-board";
+import { BullBoardModule } from "@bull-board/nestjs";
 import { FeatureModule } from "./feature/feature.module";
-import { ExpressAdapter } from "@bull-board/express";
+import { FastifyAdapter } from "@bull-board/fastify";
+import { BasicAuthMiddleware } from "src/basic-auth.middleware";
+
 
 @Module({
   imports: [
@@ -18,7 +20,8 @@ import { ExpressAdapter } from "@bull-board/express";
 
     BullBoardModule.forRoot({
       route: "/queues",
-      adapter: ExpressAdapter
+      // @ts-ignore
+      adapter: FastifyAdapter
     }),
 
     //feature modules from here.
@@ -27,5 +30,11 @@ import { ExpressAdapter } from "@bull-board/express";
   controllers: [],
   providers: []
 })
-export class AppModule {
+export class AppModule implements NestModule {
+
+  configure(consumer: MiddlewareConsumer): any {
+    consumer
+      .apply(BasicAuthMiddleware)
+      .forRoutes('/queues', 'queues', '/queues/*')
+  }
 }

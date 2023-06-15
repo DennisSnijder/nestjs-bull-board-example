@@ -1,5 +1,5 @@
 import { Controller, Get } from "@nestjs/common";
-import { BullBoardInstance, InjectBullBoard } from "nestjs-bull-board";
+import { BullBoardInstance, InjectBullBoard } from "@bull-board/nestjs";
 
 @Controller('my-feature')
 export class FeatureController {

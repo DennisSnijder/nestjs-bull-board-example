@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { BullBoardModule } from "nestjs-bull-board";
+import { BullBoardModule } from "@bull-board/nestjs";
 import { BullModule } from "@nestjs/bullmq";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 
